@@ -538,21 +538,13 @@ input, textarea, select { font-family: inherit; }
   background-position: center;
 }
 
-/* CSS gradient placeholders for each experience */
-/* REPLACE: remove .exp-img class and add <img src="..." /> */
-.exp-img--medina  { background: linear-gradient(160deg, #7A1A0A 0%, #B91C1C 50%, #E85D2A 100%); }
-.exp-img--agafay  { background: linear-gradient(160deg, #7A5000 0%, #D4930A 50%, #F4B942 100%); }
-.exp-img--cooking { background: linear-gradient(160deg, #8B3A00 0%, #C65D2E 50%, #E8A05D 100%); }
-.exp-img--hammam  { background: linear-gradient(160deg, #0F4C5C 0%, #1A7A8A 50%, #4AB8C8 100%); }
-.exp-img--atlas   { background: linear-gradient(160deg, #1A3A00 0%, #2F6B4F 50%, #6DBE8A 100%); }
-.exp-img--photo   { background: linear-gradient(160deg, #4A0040 0%, #8B1A6B 50%, #F4B942 100%); }
-
-/* Subtle pattern on exp images */
+/* Dark gradient overlay on real photos for readability */
 .exp-img::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.40) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.38) 100%);
+  pointer-events: none;
 }
 
 .exp-body { padding: 18px 20px 20px; }
@@ -619,17 +611,12 @@ input, textarea, select { font-family: inherit; }
   box-shadow: var(--shadow);
 }
 
-/* Trip image placeholders — replace with real Unsplash photos later */
+/* Trip images — real photos via inline background-image */
 .trip-img {
   height: 180px;
+  background-size: cover;
+  background-position: center;
 }
-/* CSS gradient placeholders — REPLACE with <img> tags */
-.trip-img--ourika     { background: linear-gradient(160deg, #1A3A00 0%, #2F6B4F 55%, #7EC870 100%); }
-.trip-img--ouzoud     { background: linear-gradient(160deg, #003366 0%, #0066AA 50%, #55AAEE 100%); }
-.trip-img--essaouira  { background: linear-gradient(160deg, #00334D 0%, #005588 50%, #77BBDD 100%); }
-.trip-img--kasbah     { background: linear-gradient(160deg, #5C3A00 0%, #A06B2E 50%, #D4A86A 100%); }
-.trip-img--atlas-trip { background: linear-gradient(160deg, #2A3A00 0%, #4A6B2F 50%, #99CC66 100%); }
-.trip-img--agafay-trip{ background: linear-gradient(160deg, #7A5500 0%, #C4880A 50%, #F0C060 100%); }
 
 .trip-body { padding: 16px 18px 18px; }
 .trip-name {
@@ -754,15 +741,7 @@ input, textarea, select { font-family: inherit; }
 .gallery-card:hover { transform: scale(1.03); box-shadow: var(--shadow-lg); }
 .gallery-card:hover .gc-overlay { opacity: 1; }
 
-/* Gallery CSS gradient placeholders — REPLACE with real photos */
-.gc--souks    { background: linear-gradient(160deg, #8B1A00, #C65D2E, #F4B942); }
-.gc--lanterns { background: linear-gradient(160deg, #5C3A00, #A06B2E, #F0C060); }
-.gc--desert   { background: linear-gradient(160deg, #7A5500, #C4880A, #F5D080); }
-.gc--mountains{ background: linear-gradient(160deg, #1A2A00, #2F6B4F, #88BB66); }
-.gc--riad     { background: linear-gradient(160deg, #7A1A00, #B91C1C, #E85D2A); }
-.gc--food     { background: linear-gradient(160deg, #6B3A00, #B46B20, #E0A860); }
-.gc--garden   { background: linear-gradient(160deg, #003340, #006680, #40AAAA); }
-.gc--sunset   { background: linear-gradient(160deg, #5C0020, #CC3333, #F4B942); }
+/* Gallery cards — real photos via inline background-image */
 
 /* Gallery card overlay */
 .gc-overlay {
